@@ -7,7 +7,7 @@ import { useUtils } from '../useComposables/useUtils';
 const{calculateProductTotalValue, formatNumber, calculateInvoiceTotalValue, showAlert} = useUtils();
 
 const isInvoiceValid = () => {
-    return (invoiceData.value.clientRegNumber != undefined && (invoiceData.value.documentDate != undefined && invoiceData.value.documentDate != '') && invoiceData.value.documentNumber != undefined && (invoiceData.value.productList != undefined && invoiceData.value.productList.length > 0));
+    return ((invoiceData.value.clientRegNumber != undefined && invoiceData.value.clientRegNumber != '') && (invoiceData.value.documentDate != undefined && invoiceData.value.documentDate != '') && (invoiceData.value.documentNumber != undefined && invoiceData.value.documentNumber != '') && (invoiceData.value.productList != undefined && invoiceData.value.productList.length > 0));
 }
 const formatProducts = () => {
     return invoiceData.value.productList.map(productRow).join("\n");

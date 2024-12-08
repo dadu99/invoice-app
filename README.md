@@ -10,3 +10,7 @@ npm install
 npm run dev
 ```
 
+### Run tests
+```sh
+npx vitest products.test.js
+```
